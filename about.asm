@@ -1,28 +1,9 @@
 	ORG 32768
 
-	mov ah, 0Eh
-	mov al, 'r'
-	int 10h
-	mov al, 'u'
-	int 10h
-	mov al, 'd'
-	int 10h
-	mov al, 'r'
-	int 10h
-	mov al, 'a'
-	int 10h
-	mov al, 'O'
-	int 10h
-	mov al, 'S'
-	int 10h
-	mov al, ' '
-	int 10h
-	mov al, '2'
-	int 10h
-	mov al, '0'
-	int 10h
-	mov al, '1'
-	int 10h
-	mov al, '8'
-	int 10h
+	mov si, about
+	call lib_print_string
 	ret
+
+    about  	   db 13, 10, "rudra	S 2018 is an x86 operating system built from scratch in Assembly. Licensed by Rudra Saraswat of BlueFire, Inc. This OS has a shell named tash. The OS has 1 command and one executable.", 0
+
+	%include "lib.asm"
