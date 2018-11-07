@@ -10,4 +10,4 @@ This OS has a shell named tash. The OS has 1 command and one executable.
 
 ## New features
 ###### Tash is colourful.
-###### Has an about program that has specifications of the operating system.
+###### It has an about program that has specifications of the operating system.
