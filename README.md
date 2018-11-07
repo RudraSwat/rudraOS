@@ -9,5 +9,5 @@ This OS has a shell named tash. The OS has 1 command and one executable.
 ###### Processor - Any x86 or x64 based processor
 
 ## New features
-###### Tash is colourful
+###### Tash is colourful.
 ###### Has an about program that has specifications of the operating system.
