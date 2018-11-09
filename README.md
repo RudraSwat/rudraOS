@@ -12,3 +12,5 @@ This OS has a shell named tash. The OS has 1 command and one executable.
 ## New features
 ###### Tash is colourful.
 ###### It has an about program that has specifications of the operating system.
+
+![Figure 1-1](rudraOS.png "rudraOS 2018")
