@@ -7,7 +7,7 @@ This OS has a shell named tash. The OS has 1 command and one executable.
 ###### RAM - 1 GB (Recommended - 1 GB or more)
 ###### Hard Disk Space - 5 GBs (Estimated)
 ###### Processor - Any x86 or x64 based processor
-###### Operating System - Debian, Ububtu (or any other Ubuntu-based distro)
+###### Operating System - Debian, Ubuntu (or any other Ubuntu-based distro)
 
 ## New features
 ###### Tash is colourful.
