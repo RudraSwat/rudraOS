@@ -6,4 +6,4 @@
 
     about          db 13, 10, "Test", 0
 
-        %include "lib.asm"
+        %include "rosasm-std.inc"

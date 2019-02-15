@@ -7,20 +7,10 @@
 	mov es, ax
 	mov si, start
 	call lib_print_string
-	mov si, name
+	mov si, os_name
 	call lib_print_string
-	mov si, user_input	
-	call lib_input_string
-	mov ah, 0Eh
-	mov al, 'H'
-	int 10h
-	mov al, 'i'
-	int 10h
-	mov al, ' '
-	int 10h
+	mov si, os_kernelversion
 	call lib_print_string
-	mov al, '!'
-	int 10h
 
 loop:
 	mov si, prompt
@@ -59,4 +49,5 @@ list_files:
 	user_input	times 256 db 0
 	file_list	times 1024 db 0
 
-	%include "lib.asm"
+	%include "rosasm-std.inc"
+	%include "disinf.inc"
