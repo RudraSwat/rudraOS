@@ -2,7 +2,7 @@
 ; Disk description table, to make it a valid floppy
 ; Values are those used by IBM for 1.44 MB, 3.5" diskette
 
-OEMLabel		db "BOOTTEST"	; Disk label
+OEMLabel			db "BOOTTEST"	; Disk label
 BytesPerSector		dw 512		; Bytes per sector
 SectorsPerCluster	db 1		; Sectors per cluster
 ReservedForBoot		dw 1		; Reserved sectors for boot record

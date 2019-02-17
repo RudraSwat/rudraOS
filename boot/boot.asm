@@ -7,7 +7,7 @@
 
 start:
 	mov ax, 07C0h		; Where we're loaded
-	mov ds, ax		; Data segment
+	mov ds, ax			; Data segment
 
 	mov ax, 9000h		; Set up stack
 	mov ss, ax

@@ -1,19 +1,25 @@
 #!/bin/bash
-
+rm -r out
+mkdir out
 apt install nasm mtools -y
-nasm -f bin -o boot.bin boot.asm
-rm floppy.img
-mkdosfs -C floppy.img 1440
-dd conv=notrunc if=boot.bin of=floppy.img
-nasm -f bin -o mykernel.bin mykernel.asm
-mcopy -i floppy.img mykernel.bin ::/
+cp rosasm/rosasm-std.inc .
+nasm -f bin -o out/boot.bin boot/boot.asm
+mkdosfs -C out/floppy.img 1440
+dd conv=notrunc if=out/boot.bin of=out/floppy.img
+nasm -f bin -o out/mykernel.bin kernel/mykernel.asm
+mcopy -i out/floppy.img out/mykernel.bin ::/
 
 for entry in "programs"/*
 do
   echo "Output File Name (for $entry) --> "
   read output
-  nasm -f bin -o "$output" "$entry"
-  mcopy -i floppy.img "$output" ::/
+  nasm -f bin -o out/"$output" "$entry"
+  mcopy -i out/floppy.img out/"$output" ::/
 done
+
+mkdir out/floppy_disk_image
+mv out/floppy.img out/floppy_disk_image/
+
+rm rosasm-std.inc
 
 /usr/bin/printf "Build succesful!\n"
