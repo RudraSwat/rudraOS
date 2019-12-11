@@ -43,7 +43,7 @@ list_files:
 	jmp loop
 
 	start 		db 13, 10, "rudraOS 2018", 0
-	prompt 		db 13, 10, "userland~rudraOS1.0 $ ", 0
+	prompt 		db 13, 10, "rudraOS2.0 $ ", 0
 	name 		db 13, 10, "What is your full name? ", 0
 	load_fail_msg	db 13, 10, "404 - No such executable or command", 0
 	user_input	times 256 db 0
